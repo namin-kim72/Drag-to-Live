@@ -47,3 +47,55 @@ conda activate drag2live
 # 3. Install dependencies
 # (CoTracker 설치를 위해 git이 필요합니다)
 pip install -r requirements.txt
+```
+
+## 🚀 Usage
+
+### 1. Data Preparation (Optional)
+직접 데이터셋을 구축하려면 `raw_cloud_video` 폴더에 MP4 파일들을 넣고 실행하세요. CoTracker가 궤적을 추출하여 학습 데이터를 생성합니다.
+```bash
+python build_dataset_drag2live.py
+```
+
+### 2. Training LoRA
+구축된 데이터셋을 기반으로 LoRA 어댑터를 학습합니다. (RTX 4060 기준 약 30분~1시간 소요)
+```Bash
+python train_drag_lora.py
+```
+
+### 3. Interactive Demo (GUI)
+학습된 모델을 사용하여 직접 화살표를 그리고 영상을 생성해봅니다.
+```Bash
+python interactive_demo.py
+```
+  사용법: 창이 뜨면 마우스로 원하는 구름의 이동 궤적을 그리세요. 입력을 마치면 Enter를 눌러 생성을 시작합니다.
+
+### 📊 Results
+
+
+
+https://github.com/user-attachments/assets/bebe15c9-77e8-4290-8e98-76d7513cf585
+
+
+
+### 🛠️ Tech Stack
+
+* **Core Model:** Stable Diffusion v1.5
+
+* **Motion Module:** AnimateDiff
+
+* **Trajectory Tracking:** CoTracker
+
+* **Accelerator:** HuggingFace Accelerate & PEFT
+
+* **Environment:** Python 3.10+, PyTorch 2.0+
+
+### 👨‍💻 Author
+* **Kim Nam-in** - Project Lead & Implementation - [IoT Track / Visual Intelligence Learning]
+
+### 📜 References
+1. Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance (arXiv, 2025) 
+
+2. AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning (ICLR, 2024) 
+
+3. CoTracker: It is Better to Track Together (CVPR, 2024)
