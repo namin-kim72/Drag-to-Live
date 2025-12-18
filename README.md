@@ -20,7 +20,7 @@
 ## 🏗️ System Architecture
 <img width="4729" height="4465" alt="User Trajectory Cloud-2025-12-18-061955" src="https://github.com/user-attachments/assets/0fc1e0ea-faef-4c38-8c69-5bb860453889" />
 
-본 프로젝트는 **CoTracker(Trajectory Encoder)**와 **AnimateDiff(Motion Generator)**, 그리고 **LoRA(Style Controller)**의 유기적인 결합으로 구성됩니다.
+본 프로젝트는 CoTracker(Trajectory Encoder)와 **AnimateDiff(Motion Generator)**, 그리고 LoRA(Style Controller)의 유기적인 결합으로 구성됩니다.
 1.  **Input:** 정지 이미지 + 사용자 입력 궤적
 2.  **Encoding:** CoTracker가 궤적을 좌표 데이터로 변환
 3.  **Generation:** AnimateDiff가 시간 축을 생성하고, 학습된 LoRA가 구름의 물리적 움직임을 주입
@@ -37,7 +37,7 @@
 ### Setup
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/YOUR_USERNAME/Drag-to-Live.git](https://github.com/YOUR_USERNAME/Drag-to-Live.git)
+git clone [https://github.com/namin-kim72/Drag-to-Live.git](https://github.com/namin-kim72/Drag-to-Live.git)
 cd Drag-to-Live
 
 # 2. Create Conda environment
