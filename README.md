@@ -18,8 +18,7 @@
 * **🎥 High Quality:** Stable Diffusion v1.5와 AnimateDiff를 기반으로 시네마틱한 타임랩스 영상을 생성합니다.
 
 ## 🏗️ System Architecture
-![System Architecture](assets/architecture.png)
-*(Note: Please upload the architecture diagram provided to an 'assets' folder)*
+<img width="4729" height="4465" alt="User Trajectory Cloud-2025-12-18-061955" src="https://github.com/user-attachments/assets/0fc1e0ea-faef-4c38-8c69-5bb860453889" />
 
 본 프로젝트는 **CoTracker(Trajectory Encoder)**와 **AnimateDiff(Motion Generator)**, 그리고 **LoRA(Style Controller)**의 유기적인 결합으로 구성됩니다.
 1.  **Input:** 정지 이미지 + 사용자 입력 궤적
